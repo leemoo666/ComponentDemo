@@ -1,0 +1,48 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.0'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    minSdkVersion = 15
+    targetSdkVersion = 26
+    compileSdkVersion = 26
+    buildToolsVersion = '26.0.2'
+
+    apkVersionName = "1.0.0"
+    apkVersionCode = 20180606
+
+    dependencies = [
+//            "appcompat-v7"       : 'com.android.support:appcompat-v7:27.1.1',
+//            "palette-v7"         : "com.android.support:palette-v7:26.0.0",
+//            "appcompat-v7"       : "com.android.support:appcompat-v7:26.0.0",
+//            "support-annotations": "com.android.support:support-annotations:26.0.0",
+//            "recyclerview-v7"    : "com.android.support:recyclerview-v7:26.0.0",
+//            "design"             : "com.android.support:design:26.0.0",
+//            "cardview-v7"        : "com.android.support:cardview-v7:26.0.0",
+//            "support-v4"         : "com.android.support:support-v4:26.0.0",
+    ]
+
+}

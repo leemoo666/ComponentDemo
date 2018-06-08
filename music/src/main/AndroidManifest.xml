@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.lxm.music">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application android:theme="@style/music_AppTheme">
+        <activity
+            android:name=".MusicHomeActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+
+</manifest>

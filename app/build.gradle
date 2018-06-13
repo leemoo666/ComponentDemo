@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'com.jakewharton.butterknife'
 
 android {
 
@@ -43,5 +43,7 @@ dependencies {
         implementation project(':home')
     }
 
+
     annotationProcessor 'com.alibaba:arouter-compiler:1.1.4'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 }

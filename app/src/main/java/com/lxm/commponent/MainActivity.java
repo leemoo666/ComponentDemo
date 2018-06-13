@@ -10,6 +10,9 @@ import android.view.View;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 /**
  * Created by lixiaoming on 2018/6/7.
  *
@@ -23,11 +26,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        findViewById(R.id.toMusic).setOnClickListener(this);
-        findViewById(R.id.toReader).setOnClickListener(this);
-        findViewById(R.id.toMain).setOnClickListener(this);
+        ButterKnife.bind(this);
+
+//        findViewById(R.id.toMusic).setOnClickListener(this);
+//        findViewById(R.id.toReader).setOnClickListener(this);
+//        findViewById(R.id.toMain).setOnClickListener(this);
     }
 
+    @OnClick({R.id.toMusic,R.id.toReader,R.id.toMain})
     @Override
     public void onClick(View v) {
         switch (v.getId()) {

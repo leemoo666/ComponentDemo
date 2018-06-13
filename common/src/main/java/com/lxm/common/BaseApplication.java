@@ -1,7 +1,10 @@
 package com.lxm.common;
 
 import android.app.Application;
-import android.content.Context;
+
+import com.lxm.common.dagger.AppModule;
+import com.lxm.common.dagger.DaggerAppComponent;
+//import com.lxm.common.dagger.DaggerAppComponent;
 
 /**
  * Created by lixiaoming on 2018/6/7.
@@ -9,14 +12,13 @@ import android.content.Context;
 
 public class BaseApplication extends Application {
 
-    private Context context;
 
     @Override
     public void onCreate() {
         super.onCreate();
+
+        DaggerAppComponent.builder().appModule(new AppModule(this))
+                .build();
     }
 
-    public Context getContext() {
-        return getContext();
-    }
 }
